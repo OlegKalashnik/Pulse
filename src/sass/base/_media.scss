@@ -1,0 +1,43 @@
+@media (max-width: 991px) {
+  .promo {
+    padding: 21px 5px 93px;
+    &__wrapper {
+      align-items: center;
+    }
+  }
+  .header > * {
+    width: 33%;
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    &__official {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .promo {
+    padding: 15px 7px 66px;
+    &__wrapper {
+      margin-top: 50px;
+    }
+    &__header {
+      line-height: 42px;
+      text-align: center;
+    }
+    &__subheader {
+      text-align: center;
+      margin-top: 10px;
+    }
+    &__icons {
+      width: 365px;
+      margin-top: 35px;
+    }
+  }
+  .header > * {
+    width: 45%;
+  }
+}
