@@ -8,12 +8,38 @@
   .header > * {
     width: 33%;
   }
+  .benefit {
+    &__items {
+      width: 100%;
+    }
+    &__item {
+      margin: 0 5px;
+    }
+  }
 }
 
 @media (max-width: 767px) {
   .header {
     &__official {
       display: none;
+    }
+  }
+  .benefit {
+    &__items {
+      flex-wrap: wrap;
+    }
+    &__items > *:nth-child(3) {
+      margin-bottom: 0;
+    }
+    &__item {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    &__icon {
+      margin-bottom: 20px;
+    }
+    &__title {
+      margin-bottom: 15px;
     }
   }
 }
