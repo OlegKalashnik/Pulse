@@ -1,4 +1,5 @@
 @media (max-width: 991px) {
+  //768
   .promo {
     padding: 21px 5px 93px;
     &__wrapper {
@@ -16,9 +17,15 @@
       margin: 0 5px;
     }
   }
+  .consultation {
+    .container {
+      padding: 0 5px;
+    }
+  }
 }
 
 @media (max-width: 767px) {
+  //576
   .header {
     &__official {
       display: none;
@@ -45,6 +52,7 @@
 }
 
 @media (max-width: 575px) {
+  //375
   .promo {
     padding: 15px 7px 66px;
     &__wrapper {
@@ -65,5 +73,20 @@
   }
   .header > * {
     width: 45%;
+  }
+  .consultation {
+    padding: 70px 0 65px;
+    br {
+      display: none;
+    }
+    &__descr {
+      text-align: center;
+    }
+  }
+  .section-header_left {
+    text-align: center;
+  }
+  .feed-form {
+    width: 100%;
   }
 }
