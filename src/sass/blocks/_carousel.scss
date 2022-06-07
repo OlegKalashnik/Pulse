@@ -1,0 +1,59 @@
+.carousel {
+  padding: 111px 0;
+  max-height: 750px;
+  .owl-carousel {
+    position: relative;
+    max-height: 530px;
+    margin: 0 auto;
+    .owl-item {
+      max-height: 530px;
+      img {
+        display: block;
+        margin: 0 auto;
+        height: 100%;
+        width: auto;
+      }
+    }
+    .owl-nav {
+      span {
+        display: none;
+      }
+      .owl-prev {
+        position: absolute;
+        left: -33px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 50px;
+        width: 30px;
+        background: url('../../img/icons/chevron-left-solid.png') center
+          (center / cover) no-repeat;
+      }
+      .owl-next {
+        position: absolute;
+        right: -33px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 50px;
+        width: 30px;
+        background: url('../../img/icons/chevron-right-solid.png') center
+          (center / cover) no-repeat;
+      }
+    }
+    .owl-dots {
+      position: absolute;
+      top: 110%;
+      left: 50%;
+      transform: translateX(-50%);
+      .owl-dot {
+        margin: 0 15px;
+        width: 15px;
+        height: 15px;
+        border: 2px solid $main-color;
+        border-radius: 100%;
+      }
+      .active {
+        background-color: $main-color;
+      }
+    }
+  }
+}
