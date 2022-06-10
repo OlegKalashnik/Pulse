@@ -1,4 +1,5 @@
 @media (max-width: 1200px) {
+  //992
   .carousel {
     .owl-carousel {
       .owl-nav {
@@ -75,6 +76,11 @@
       }
     }
   }
+  .catalog {
+    &__tab {
+      width: 170px;
+    }
+  }
 }
 
 @media (max-width: 575px) {
@@ -114,5 +120,18 @@
   }
   .feed-form {
     width: 100%;
+  }
+  .catalog {
+    &__tabs {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__tab {
+      width: 222px;
+      margin-bottom: 7px;
+    }
+    &__content {
+      margin-top: 37px;
+    }
   }
 }
