@@ -1,0 +1,37 @@
+.rewiev-item {
+  padding-top: 60px;
+  display: flex;
+  align-items: flex-start;
+  &__photo {
+    width: 169px;
+    margin-right: 61px;
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+  &__content {
+    width: 658px;
+    p {
+      padding: 0;
+      margin: 10px 0 0;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 24px;
+      color: #0d0d0d;
+    }
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    color: #0d0d0d;
+    span {
+      display: block;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 22px;
+      color: #646464;
+    }
+  }
+}
