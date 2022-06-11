@@ -47,6 +47,19 @@
       margin-right: 40px;
     }
   }
+  .footer {
+    &__info {
+      width: 400px;
+      height: 200px;
+      padding: 30px 40px 36px;
+    }
+    &__addr {
+      margin-bottom: 18px;
+    }
+    &__phone {
+      margin-bottom: 18px;
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -160,6 +173,11 @@
     padding-top: 45px;
     &__photo {
       margin-right: 10px;
+    }
+  }
+  .footer {
+    &__info {
+      width: 100%;
     }
   }
 }
