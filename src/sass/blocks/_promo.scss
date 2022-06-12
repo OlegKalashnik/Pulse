@@ -36,6 +36,10 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 14px;
+    transition: 0.5s all;
+    &:hover {
+      transform: scale(1.5);
+    }
     img {
       display: block;
       margin: 0 auto;

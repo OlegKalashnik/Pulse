@@ -48,8 +48,13 @@
       height: 53px;
       border: 2px solid #fff;
       border-radius: 100%;
+      transition: 0.5s all;
       img {
         height: 25px;
+      }
+      &:hover {
+        box-shadow: 0 0 13px 0 #fff;
+        transform: scale(1.1);
       }
     }
   }
