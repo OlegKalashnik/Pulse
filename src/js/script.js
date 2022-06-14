@@ -63,4 +63,37 @@ $(document).ready(function () {
       $('.overlay, #order').fadeIn('slow')
     })
   })
+
+  function validateForms(form) {
+    $(form).validate({
+      rules: {
+        // simple rule, converted to {required:true}
+        name: {
+          required: true,
+          minlength: 2,
+        },
+        phone: 'required',
+        // compound rule
+        email: {
+          required: true,
+          email: true,
+        },
+      },
+      messages: {
+        name: {
+          required: 'Введите своё имя',
+          minlength: jQuery.validator.format('Минимум {0} символа!'),
+        },
+        phone: 'Введите свой телефон',
+        email: {
+          required: 'Введите свою почту',
+          email: 'Неверный формат',
+        },
+      },
+    })
+  }
+
+  validateForms('#order form')
+  validateForms('#consultation form')
+  validateForms('#consultation-form')
 })
