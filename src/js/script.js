@@ -48,7 +48,7 @@ $(document).ready(function () {
     })
   }
   toggleSlide('.catalog-item__link')
-  toggleSlide('.catalog-item__link__back')
+  toggleSlide('.catalog-item__link_back')
 
   //modals
   $('[data-modal=consultation]').on('click', function () {

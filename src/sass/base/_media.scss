@@ -180,4 +180,10 @@
       width: 100%;
     }
   }
+  .modal {
+    &__close {
+      top: 8px;
+      right: 16px;
+    }
+  }
 }
