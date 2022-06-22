@@ -63,7 +63,7 @@ $(document).ready(function () {
       $('.overlay, #order').fadeIn('slow')
     })
   })
-
+  // validation
   function validateForms(form) {
     $(form).validate({
       rules: {
@@ -96,9 +96,9 @@ $(document).ready(function () {
   validateForms('#order form')
   validateForms('#consultation form')
   validateForms('#consultation-form')
-
+  // input mask
   $('input[name=phone]').mask('+7(999) 999-99-99')
-
+  // mailer
   $('form').submit(function (e) {
     e.preventDefault()
     $.ajax({
@@ -111,6 +111,19 @@ $(document).ready(function () {
       $('.overlay, #thanks').fadeIn('slow')
       $('form').trigger('reset')
     })
+    return false
+  })
+  // smooth scroll and pageup
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 1600) {
+      $('.pageup').fadeIn('slow')
+    } else {
+      $('.pageup').fadeOut('slow')
+    }
+  })
+  $("a[href^='#']").click(function () {
+    let _href = $(this).attr('href')
+    $('html, body').animate({ scrollTop: $(_href).offset().top + 'px' })
     return false
   })
 })
