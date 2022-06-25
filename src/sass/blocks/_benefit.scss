@@ -30,6 +30,24 @@
     img {
       width: 100%;
     }
+    &_heartbeat {
+      animation-name: heartbeat;
+      animation-duration: 2s;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
+    }
+    &_steps {
+      animation-name: steps;
+      animation-duration: 2s;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
+    }
+    &_shake {
+      animation-name: shake;
+      animation-duration: 2s;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
+    }
   }
   &__title {
     font-weight: 700;
