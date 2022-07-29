@@ -6,6 +6,10 @@ const autoprefixer = require('gulp-autoprefixer')
 const cleanCSS = require('gulp-clean-css')
 const imagemin = require('gulp-imagemin')
 const htmlmin = require('gulp-htmlmin')
+const webpConv = require('gulp-webp')
+const changed = require('gulp-changed')
+const multiDest = require('gulp-multi-dest')
+const plumber = require('gulp-plumber')
 
 // Static server
 gulp.task('server', function () {
@@ -58,7 +62,30 @@ gulp.task('mailer', function () {
 })
 
 gulp.task('images', function () {
-  return gulp.src('src/img/**/*').pipe(imagemin()).pipe(gulp.dest('dist/img'))
+  return gulp
+    .src('src/img/**/*.+(gif|svg|ico)')
+    .pipe(imagemin())
+    .pipe(gulp.dest('dist/img'))
+})
+
+gulp.task('webp', function () {
+  return (
+    gulp
+      .src('src/img/**/*.+(png|jpg|jpeg)')
+      // .pipe(imagemin())
+      .pipe(plumber())
+      .pipe(
+        changed('build/img', {
+          extension: '.webp',
+        })
+      )
+      .pipe(
+        webpConv({
+          quality: 100,
+        })
+      )
+      .pipe(multiDest(['src/img', 'dist/img']))
+  )
 })
 
 gulp.task(
@@ -71,6 +98,7 @@ gulp.task(
     'scripts',
     'fonts',
     'mailer',
-    'images'
+    'images',
+    'webp'
   )
 )
